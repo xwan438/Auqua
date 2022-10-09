@@ -28,6 +28,12 @@ weather = {
 }
 weatherlist.append(weather)
 
+print(temp)
+print(unit)
+print(desc)
+print(now)
+print(datenow)
+
 
 
 
