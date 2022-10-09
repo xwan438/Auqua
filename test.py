@@ -5,7 +5,7 @@ import pandas as pd
 
 s = HTMLSession()
 
-url = f'https://www.google.com/search?q=google+weather+Mahurangi'
+url = f'https://www.google.co.nz/search?q=google+weather+Mahurangi'
 
 r = s.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36'})
 
