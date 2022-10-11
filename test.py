@@ -31,10 +31,10 @@ weather = {
 }
 weatherlist.append(weather)
 
-db = pymysql.connect(host='20.214.188.216', port=3306, user='root', password='Wx123456.', db='aqua', charset='utf8')
+db = pymysql.connect(host='20.214.188.216', port=3306, user='root', password='Wx123456.', db='aquadatabase', charset='utf8')
 cursor = db.cursor()
 
-sql = "insert into aqua.web_sc values (%s,'%s','%s','%s')"%(temp, desc[1:], now,datenow)
+sql = "insert into aquadatabase.web_sc values (%s,'%s','%s','%s')"%(temp, desc[1:], now,datenow)
 cursor.close()
 db.close()
 
