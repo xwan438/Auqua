@@ -1,6 +1,7 @@
 from requests_html import HTMLSession
 import time
 import pandas as pd
+import pymysql
 
 
 s = HTMLSession()
@@ -18,6 +19,8 @@ desc = r.html.find('div.VQF4g', first=True).find('span#wob_dc', first=True).text
 
 datenow = time.strftime('%d-%b')
 
+
+
 weather = {
     
     'temp': temp,
@@ -27,6 +30,13 @@ weather = {
     'date': datenow 
 }
 weatherlist.append(weather)
+
+db = pymysql.connect(host='20.214.188.216', port=3306, user='root', passwd='Wx123456.', db='TopicDB', charset='utf8')
+cursor = db.cursor()
+
+sql = "insert into aqua.web_sc values (%s,'%s','%s','%s')"%(temp, desc[1:], now,datenow)
+cursor.close()
+db.close()
 
 print(temp)
 print(unit)
