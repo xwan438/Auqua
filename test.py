@@ -35,6 +35,9 @@ db = pymysql.connect(host='20.214.188.216', port=3306, user='root', password='Wx
 cursor = db.cursor()
 
 sql = "insert into aquadatabase.web_sc values (%s,'%s','%s','%s','%s')"%(temp, unit, desc, now,datenow)
+cursor.execute(sql)
+  
+db.commit()
 cursor.close()
 db.close()
 
