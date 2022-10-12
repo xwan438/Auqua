@@ -16,10 +16,10 @@ for i in results:
         m = round((m - 32) / 1.8)
         datalist.append(m)
 
-sql_units = "select temp from web_sc;"
-cursor.execute(sql)
+sql_units = "update web_sc set unit = '°C'"
+cursor.execute(sql_units)
 results = cursor.fetchall()
-
+       
 db.commit()
 cursor.close()
 db.close()
