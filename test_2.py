@@ -58,7 +58,7 @@ for i in results:
 db.commit()
 cursor.close()
 db.close()
-phs_float = list(map(flaot, phs))
+phs_float = list(map(float, phs))
 
 time = pd.DataFrame(times, columns = ['Time'])
 print(time)
