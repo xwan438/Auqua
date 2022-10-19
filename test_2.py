@@ -38,7 +38,7 @@ for i in range(24):
     water_temps.append(temperature)
 
 
-pHs = []
+phs = []
 
 db = pymysql.connect(host='20.214.188.216', port=3306, user='root', password='Wx123456.', db='aquadatabase',
                      charset='utf8')
