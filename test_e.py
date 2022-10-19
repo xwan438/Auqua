@@ -38,13 +38,21 @@ def message_config():
     xlsx.add_header('Content-Disposition', 'attachment', filename=file_name)
     message.attach(xlsx)
     
-    att3=MIMEImage(open('ph.jpg','rb').read())
+    image1_name = 'ph.jpg'
+    image1_path = os.path.join(image1_name)
+    
+    att3=MIMEImage(open(image1_path,'rb').read())
     att3["Content-Type"]='application/octet-stream'
-    att3["Content-Disposition"] = 'attachment; filename="fujian3.jpg"'
+    
+    att3.add_header('Content-Disposition', 'attachment', filename=image1_name)
     message.attach(att3)
-    att2=MIMEImage(open('temp.jpg','rb').read())
+    
+    image2_name = 'temp.jpg'
+    image2_path = os.path.join(image2_name)
+    
+    att2=MIMEImage(open( image2_path,'rb').read())
     att2["Content-Type"]='application/octet-stream'
-    att2["Content-Disposition"] = 'attachment; filename="fujian3.jpg"'
+    att2.add_header('Content-Disposition', 'attachment', filename=image2_name)
     message.attach(att2)
     
     return message
