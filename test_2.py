@@ -48,7 +48,7 @@ for i in results:
 db.commit()
 cursor.close()
 db.close()
-water_temps_int = list(map(int, phs))
+water_temps_int = list(map(int, water_temps))
 
 
 
