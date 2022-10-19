@@ -49,6 +49,13 @@ db.commit()
 cursor.close()
 db.close()
 water_temps_int = list(map(int, water_temps))
+water_temps_int_1 = []
+for i in water_temps_int:
+    a = i - 17
+    water_temps_int_1.append(a)
+    
+    
+    
 
 
 
@@ -78,7 +85,7 @@ phs_float = list(map(float, phs))
 time = pd.DataFrame(times, columns = ['Time'])
 print(time)
 
-temperature_data = pd.DataFrame(water_temps_int, columns = ['Temperature'])
+temperature_data = pd.DataFrame(water_temps_int_1, columns = ['Temperature'])
 print(temperature_data)
 
 pH_data = pd.DataFrame(phs_float, columns = ['pH'])
