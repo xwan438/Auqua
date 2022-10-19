@@ -31,7 +31,7 @@ def message_config():
     message['To']   = Header("cutomer", 'utf-8')
     message['Subject'] = Header('data_scraping', 'utf-8')
 
-    file_name = 'weatherlist.csv'
+    file_name = 'temperature_data_test.csv'
     file_path = os.path.join(file_name)
     xlsx = MIMEApplication(open(file_path, 'rb').read())
     xlsx["Content-Type"] = 'application/octet-stream'
