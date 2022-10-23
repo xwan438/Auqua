@@ -124,8 +124,8 @@ if __name__ == "__main__":
     for dayweather in data["next_days"]:
         t1 = t1 + ("="*40 + dayweather["name"] + "="*40 + "<br/>")
         t1 = t1 + ("Description:" + dayweather["weather"] + "<br/>")
-        t1 = t1 + (f"Max temperature: {dayweather['max_temp']}°C <br/>")
-        t1 = t1 + (f"Min temperature: {dayweather['min_temp']}°C <br/>")
+        t1 = t1 + (f"Max temperature: {int((int(dayweather['max_temp']) - 32)/1.8)}°C <br/>")
+        t1 = t1 + (f"Min temperature: {int((int(dayweather['min_temp']) - 32)/1.8)}°C <br/>")
     
     t_r = t + t1
  
