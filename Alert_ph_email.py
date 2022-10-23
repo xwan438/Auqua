@@ -17,6 +17,14 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.image import MIMEImage
 import os
+
+mail_host = "smtp.qq.com"
+mail_user = "1006075208@qq.com"
+mail_pass = "vzgmgbdioztvbcdd"
+
+
+sender = '1006075208@qq.com'
+receivers = ['jocker.xw@gmail.com']
 def message_config(r):
 
 
