@@ -67,7 +67,7 @@ if __name__ == "__main__":
   db.commit()
   cursor.close()
   db.close()
-  water_temps_int = list(map(int, water_temps))
+  water_temps_int = list(map(float, water_temps))
   
   w = water_temps_int[-1] 
   r = ''
