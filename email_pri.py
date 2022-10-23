@@ -67,7 +67,7 @@ def message_config(r):
 
 
     mail_msg = """
-        <p>%s</p>
+        <body>%s</body>
         
         
     """%r
@@ -111,24 +111,24 @@ if __name__ == "__main__":
     data = get_weather_data(URL)
     # print data
     t = ''
-    t_w = ("Weather for:" + data["region"] + "\n")
-    t_d = ("Now:" + data["dayhour"] + "\n")
-    t_t = (f"Temperature now: {data['temp_now']}°C \n")
-    t_d1 = ("Description:" + data['weather_now'] +"\n")
-    t_p = ("Precipitation:" + data["precipitation"] +"\n")
-    t_h = ("Humidity:" +  data["humidity"] + "\n")
-    t_w1 = ("Wind:" +  data["wind"] + "\n")
-    t_wp = ("Weather prediction for the next 7 days:" + "\n")
+    t_w = ("Weather for:" + data["region"] + "<br/>")
+    t_d = ("Now:" + data["dayhour"] + "<br/>")
+    t_t = (f"Temperature now: {data['temp_now']}°C <br/>")
+    t_d1 = ("Description:" + data['weather_now'] +"<br/>")
+    t_p = ("Precipitation:" + data["precipitation"] +"<br/>")
+    t_h = ("Humidity:" +  data["humidity"] + "<br/>")
+    t_w1 = ("Wind:" +  data["wind"] + "<br/>")
+    t_wp = ("Weather prediction for the next 7 days:" + "<br/>")
     t = t_w + t_d + t_t + t_d1 + t_p + t_h + t_w1 + t_wp
     t1 = ''
     for dayweather in data["next_days"]:
-        t1 = t1 + ("="*40 + dayweather["name"] + "="*40 + "\n")
-        t1 = t1 + ("Description:" + dayweather["weather"] + "\n")
-        t1 = t1 + (f"Max temperature: {dayweather['max_temp']}°C \n")
-        t1 = t1 + (f"Min temperature: {dayweather['min_temp']}°C \n")
+        t1 = t1 + ("="*40 + dayweather["name"] + "="*40 + "<br/>")
+        t1 = t1 + ("Description:" + dayweather["weather"] + "<br/>")
+        t1 = t1 + (f"Max temperature: {dayweather['max_temp']}°C <br/>")
+        t1 = t1 + (f"Min temperature: {dayweather['min_temp']}°C <br/>")
     
     t_r = t + t1
-    print(t_r)
+ 
     message = message_config(t_r)
     send_mail(message)
         
