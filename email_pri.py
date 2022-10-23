@@ -70,7 +70,7 @@ def message_config(r):
         <h2>%s</h2>
         
         
-    """r
+    """%r
     content = MIMEText(mail_msg, 'html', 'utf-8')
     message = MIMEMultipart()
     message.attach(content)
