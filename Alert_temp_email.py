@@ -81,6 +81,7 @@ if __name__ == "__main__":
       a = int((i - 32)/1.8)
       water_temps_int_1.append(a)
   w = water_temps_int_1[-1] 
+  print(w)
   r = ''
   if w < 12:
     r = r + ("Now the real-time temperature is too low, please pay attention to the safety of farmers")
