@@ -67,7 +67,7 @@ def message_config(r):
 
 
     mail_msg = """
-        <h2>%s</h2>
+        <p>%s</p>
         
         
     """%r
