@@ -14,7 +14,7 @@ mail_pass = "vzgmgbdioztvbcdd"
 
 
 sender = '1006075208@qq.com'
-receivers = ['1006075208@qq.com']
+receivers = ['jocker.xw@gmail.com']
 
 
 def message_config():
