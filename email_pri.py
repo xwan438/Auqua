@@ -139,7 +139,7 @@ if __name__ == "__main__":
     t_h = ("Humidity:" +  data["humidity"] + "\n")
     t_w1 = ("Wind:" +  data["wind"] + "\n")
     t_wp = ("Weather prediction for the next 7 days:" + "\n")
-    
+    t = t_w + t_d + t_t + t_d1 + t_p + t_h + t_w1 + t_wp
     t1 = ''
     for dayweather in data["next_days"]:
         t1 = t1 + ("="*40 + dayweather["name"] + "="*40 + "\n")
@@ -147,7 +147,7 @@ if __name__ == "__main__":
         t1 = t1 + (f"Max temperature: {dayweather['max_temp']}°C \n")
         t1 = t1 + (f"Min temperature: {dayweather['min_temp']}°C \n")
     
-    t_r = t + t_1
+    t_r = t + t1
     message = message_config(t_r)
     send_mail(message)
         
