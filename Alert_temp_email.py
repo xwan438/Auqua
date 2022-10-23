@@ -84,9 +84,12 @@ if __name__ == "__main__":
   r = ''
   if w < 12:
     r = r + ("Now the real-time temperature is too low, please pay attention to the safety of farmers")
+    message = message_config(r)
+    send_mail(message)
   if w > 35:
     r = r + ("Now the real-time temperature is too high, please pay attention to the safety of farmers")
-  message = message_config(r)
-  send_mail(message)
+    message = message_config(r)
+    send_mail(message)
+  
   
 
