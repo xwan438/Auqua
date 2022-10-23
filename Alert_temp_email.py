@@ -78,7 +78,7 @@ if __name__ == "__main__":
   water_temps_int = list(map(int, water_temps))
   water_temps_int_1 = []
   for i in water_temps_int:
-      a = i - 17
+      a = int((i - 32)/1.8)
       water_temps_int_1.append(a)
   w = water_temps_int_1[-1] 
   r = ''
