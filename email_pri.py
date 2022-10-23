@@ -113,7 +113,7 @@ if __name__ == "__main__":
     t = ''
     t_w = ("Weather for:" + data["region"] + "<br/>")
     t_d = ("Now:" + data["dayhour"] + "<br/>")
-    t_t = (f"Temperature now: {data['temp_now']}°C <br/>")
+    t_t = (f"Temperature now: {int((int(data['temp_now']) - 32)/1.8)}°C <br/>")
     t_d1 = ("Description:" + data['weather_now'] +"<br/>")
     t_p = ("Precipitation:" + data["precipitation"] +"<br/>")
     t_h = ("Humidity:" +  data["humidity"] + "<br/>")
