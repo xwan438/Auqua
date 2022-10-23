@@ -17,6 +17,14 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.image import MIMEImage
 import os
+
+mail_host = "smtp.qq.com"
+mail_user = "1006075208@qq.com"
+mail_pass = "vzgmgbdioztvbcdd"
+
+
+sender = '1006075208@qq.com'
+receivers = ['jocker.xw@gmail.com']
 def message_config(r):
 
 
@@ -76,8 +84,8 @@ if __name__ == "__main__":
   r = ''
   if w < 12:
     r = r + ("Now the real-time temperature is too low, please pay attention to the safety of farmers")
-  if w > 40:
-    r = r + ("Now the real-time temperature is too low, please pay attention to the safety of farmers")
+  if w > 35:
+    r = r + ("Now the real-time temperature is too high, please pay attention to the safety of farmers")
   message = message_config(r)
   send_mail(message)
   
