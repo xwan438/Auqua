@@ -128,6 +128,7 @@ if __name__ == "__main__":
         t1 = t1 + (f"Min temperature: {dayweather['min_temp']}°C \n")
     
     t_r = t + t1
+    print(t_r)
     message = message_config(t_r)
     send_mail(message)
         
