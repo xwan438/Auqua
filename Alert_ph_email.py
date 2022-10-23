@@ -84,7 +84,7 @@ if __name__ == "__main__":
     r = r + ("Now the real-time PH is too low, please pay attention to the safety of farmers")
     message = message_config(r)
     send_mail(message)
-  if w > 8:
+  if w > 11:
     r = r + ("Now the real-time PH is too high, please pay attention to the safety of farmers")
     message = message_config(r)
     send_mail(message)
