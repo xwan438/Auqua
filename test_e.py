@@ -21,7 +21,7 @@ def message_config():
 
 
     mail_msg = """
-        <h2>hello</h2>
+        <h2>here is our today's result, please see our attach files.</h2>
         
         
     """
