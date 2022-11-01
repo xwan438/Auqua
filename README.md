@@ -1,7 +1,7 @@
 # Welcome to our 159333 Aquatech Project
 Group Members:
-Xiang Wang 
-Filip Trifunovic
+Xiang Wang, 
+Filip Trifunovic,
 Wei Li 
 
 Main Idea：
